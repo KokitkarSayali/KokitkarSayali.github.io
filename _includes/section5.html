@@ -1,0 +1,35 @@
+<section id="testimonials">
+    <div class="container">
+        <!-- section title -->
+        <h2 class="section-title wow fadeInUp">{{site.data.main.section5.title}}</h2>
+        <div class="spacer" data-height="60"></div>
+        <!-- testimonials wrapper -->
+        <div class="testimonials-wrapper">
+            {% for item in site.data.section5.Reviews %}
+            <!-- testimonial item -->
+            <div class="testimonial-item text-center mx-auto">
+                <div class="thumb mb-3 mx-auto">
+                    <img src="{{item.img}}" alt="customer-name" class="boximg" />
+                </div>
+                <h4 class="mt-3 mb-0">{{item.name}}</h4>
+                <span class="subtitle">{{item.designation}}</span>
+                <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+                    <p class="mb-0">{{item.text}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            {% for item in site.data.section5.Icons %}
+            <div class="col-md-3 col-6">
+                <!-- client item -->
+                <div class="client-item">
+                    <div class="inner">
+                        <img src="{{item}}" width="100em" height="100em" alt="julia" />
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
