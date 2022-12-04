@@ -1,0 +1,31 @@
+<section id="blog">
+    <div class="container">
+        <!-- section title -->
+        <h2 class="section-title wow fadeInUp">{{site.data.main.section6.title}}</h2>
+        <div class="spacer" data-height="60"></div>
+        <div class="row blog-wrapper">
+            {% for item in site.data.section6.posts %} 
+            <div class="col-md-4">
+                <!-- blog item -->
+                <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                    <div class="thumb">
+                        <a href="{{item.link}}">
+                            <span class="category">{{item.type}}</span>
+                        </a>
+                        <a href="{{item.link}}">
+                            <img src="{{item.img}}" alt="blog-title" />
+                        </a>
+                    </div>
+                    <div class="details">
+                        <h4 class="my-0 title"><a href="{{item.link}}">{{item.title}}</a></h4>
+                        <ul class="list-inline meta mb-0 mt-2">
+                            <li class="list-inline-item">{{item.date}}</li>
+                            <li class="list-inline-item">{{item.author}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

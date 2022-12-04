@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>{{site.title}}</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/simple-line-icons.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/slick.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+	<style>
+.social-icons li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.social-icons li a {
+  font-size: 21px;
+}
+
+{% for item in site.data.homesection.socialsites %}
+
+.social-icons li:nth-child({{item.position}}) a:hover
+{
+  color: #{{item.color}} !important;
+}
+
+{% endfor %}
+	</style>
+</head>
+
+<body>
+
+<!-- Preloader -->
+{%include preloader.html%}
+
+<main class="content">
+
+	<!-- section home -->
+	<section id="home" class="home d-flex light align-items-center">
+		<div class="container">
+
+			<!-- intro -->
+			<div class="intro">
+				<!-- avatar image -->
+				<img src="{{site.data.homesection.avatar}}"  class="mb-4" width="{{site.data.homesection.avatar_scale}}em" height="{{site.data.homesection.avatar_scale}}em"/>
+
+				<!-- info -->
+				<h1 class="mb-2 mt-0">{{site.name}}</h1>
+				<span>I'm a <span class="text-rotating">{% for item in site.data.homesection.whoami %}{{item}}{% endfor %}</span></span>
+
+				<!-- social icons -->
+				<ul class="social-icons light list-inline mb-0 mt-4">
+					{% for item in site.data.homesection.socialsites%} <li class="list-inline-item"><a href="{{item.link}}"><i class="fab fa-{{item.site}}"></i></a></li> {% endfor %}
+				</ul>
+				<!-- buttons -->
+				{% if site.data.homesection.btn.show == true %}
+				<div class="mt-4">
+					<a href="{{site.data.homesection.btn.link}}" target="_blank" class="btn btn-default">{{site.data.homesection.btn.text}}</a>
+				</div>
+				{% endif %}
+			</div>
+
+			<!-- parallax layers -->
+			<div class="parallax" data-relative-input="true">
+				{% for item in site.data.homesection.parallax %}
+				<img src="{{item.img}}" alt="mm" width="{{item.scale}}" height="{{item.scale}}" data-depth= "{{item.depth}}" class="layer p{{item.position}}">
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- section about -->
+	{% if site.data.main.section1.show == true %}
+	{%include section1.html%}
+	{% endif %}
+
+	<!-- section skills -->
+	{% if site.data.main.section2.show == true %}
+	{%include section2.html%}
+	{% endif %}
+
+	<!-- section education -->
+	{% if site.data.main.section3.show == true %}
+	{%include section3.html%}
+	{% endif %}
+
+	<!-- section works -->
+	{% if site.data.main.section4.show == true %}
+	{%include section4.html%}
+	{% endif %}
+
+	<!-- section testimonials -->
+	{% if site.data.main.section5.show == true %}
+	{%include section5.html%}
+	{% endif %}
+
+	<!-- section blog -->
+	{% if site.data.main.section6.show == true %}
+	{%include section6.html%}
+	{% endif %}
+
+	<!-- section contact -->
+	{% if site.data.main.contact.show == true %}
+	{%include contact.html%}
+	{% endif %}
+
+	<div class="spacer" data-height="96"></div>
+
+</main>
+
+<!-- Go to top button -->
+<a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
+
+<!-- SCRIPTS -->
+<script src="assets/js/jquery-1.12.3.min.js"></script>
+<script src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/infinite-scroll.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/contact.js"></script>
+<script src="assets/js/validator.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/morphext.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
