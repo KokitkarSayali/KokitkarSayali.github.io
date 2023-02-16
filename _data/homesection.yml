@@ -1,8 +1,8 @@
 whoami: 
-- whoami title1,
-- whoami title2,
-- whoami title3, 
-- whoami title4
+- Title,
+- title2,
+- title3, 
+- title4
 
 avatar: assets/images/avatar.svg
 avatar_scale: 180
