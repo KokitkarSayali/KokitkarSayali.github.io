@@ -1,6 +1,6 @@
 Intro:  
   text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  avatar: assets/images/formal.jpg
+  avatar: assets/images/avatar.svg
 
 btn: 
   show: true
