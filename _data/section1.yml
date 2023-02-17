@@ -8,8 +8,8 @@ btn:
   link: www.example.com/something
 
 skills: 
-  - skill: Skill 1
-    percentage: 85
+  - skill: Python
+    percentage: 60
     color: "6610f2"
 
   - skill: Skill 2
